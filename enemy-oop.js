@@ -6,15 +6,12 @@ class enemy {
         this.attackPoint = attackPoint;
         this.isDead = isDead;
     }
-    detail(){
-        return `${this.name}`, `${this.healthPoint}`;
-    }
+    // detail(){
+    //     return `${this.name}`, `${this.healthPoint}`;
+    // }
 }
 
 class pocong extends enemy {
-    constructor(attackPoint){
-        super(attackPoint)
-    }
 
     jump(){
         this.attackPoint += 100;
@@ -28,15 +25,12 @@ class pocong extends enemy {
 
 }
 
-let alpha = new pocong (100);
+let alpha = new pocong ("wild pocong", 100, 1000, 300, true);
 
 console.log(alpha.jump());
 console.log(alpha.superJump());
 
 class zombie extends enemy {
-    constructor(attackPoint){
-        super(attackPoint)
-    }
 
     walking(){
         this.attackPoint += 10;
@@ -50,7 +44,7 @@ class zombie extends enemy {
 
 }
 
-let beta = new zombie (100);
+let beta = new zombie ("wild zombie", 50, 1000, 100, true);
 
 console.log(beta.walking());
 console.log(beta.running());
